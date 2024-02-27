@@ -8,6 +8,7 @@ import (
 var InternRoutes = func(r *mux.Router) {
 	r.HandleFunc("/interns", controller.GetAllInternDetails).Methods("GET")
 	r.HandleFunc("/intern/{id}", controller.GetInternDetails).Methods("GET")
+	r.HandleFunc("/intern", controller.CreateIntern).Methods("POST")
 	r.HandleFunc("/intern/{id}", controller.UpdateIntern).Methods("PUT")
 	r.HandleFunc("/intern/{id}", controller.DeleteIntern).Methods("DELETE")
 }
